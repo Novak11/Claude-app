@@ -1,0 +1,15 @@
+# Docker Compose configuration for local development
+# Will be completed in Session 5
+
+version: '3.8'
+
+services:
+  # Services will be defined after implementation
+  frontend:
+    # Configuration pending
+
+  api:
+    # Configuration pending
+
+  generator:
+    # Configuration pending

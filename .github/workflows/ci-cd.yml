@@ -1,0 +1,19 @@
+# CI/CD Pipeline for AI-Brain Setup
+# Will be implemented in Session 6
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # Job definitions will be added in Session 6
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Placeholder
+        run: echo "CI/CD pipeline will be implemented in Session 6"
