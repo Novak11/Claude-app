@@ -1,15 +1,44 @@
-# Docker Compose configuration for local development
-# Will be completed in Session 5
-
 version: '3.8'
 
 services:
-  # Services will be defined after implementation
   frontend:
-    # Configuration pending
+    build:
+      context: ./frontend-service
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - API_URL=http://api:8000
+      - PORT=5000
+    depends_on:
+      - api
+    networks:
+      - app-network
 
   api:
-    # Configuration pending
+    build:
+      context: ./api-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GENERATOR_URL=http://generator:8001
+    depends_on:
+      - generator
+    networks:
+      - app-network
 
   generator:
-    # Configuration pending
+    build:
+      context: ./generator-service
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - PORT=8001
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
