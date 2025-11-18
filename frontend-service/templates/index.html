@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Brain Setup - Create Your Memory System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI-Brain Integration Setup</h1>
+            <p class="subtitle">Create your personalized AI memory system in 10 questions</p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="/generate" class="questionnaire">
+            <div class="question">
+                <label for="use_case">1. What's your primary use case?</label>
+                <select name="use_case" id="use_case" required>
+                    <option value="">Select...</option>
+                    <option value="career">Career transition/job search</option>
+                    <option value="learning">Technical learning & skill development</option>
+                    <option value="creative">Creative work (writing, design, etc.)</option>
+                    <option value="research">Research & analysis</option>
+                    <option value="productivity">Personal productivity & organization</option>
+                    <option value="business">Business/entrepreneurship</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="detail_level">2. How detailed should your profile be?</label>
+                <select name="detail_level" id="detail_level" required>
+                    <option value="">Select...</option>
+                    <option value="minimal">Minimal (essential info only, ~25 questions, 15 min)</option>
+                    <option value="moderate">Moderate (balanced detail, ~45 questions, 30 min)</option>
+                    <option value="deep">Deep (comprehensive profile, ~70 questions, 60 min)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>3. Which aspects matter most to you? (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="key_aspects" value="technical"> Technical skills & background</label>
+                    <label><input type="checkbox" name="key_aspects" value="career"> Career goals & progression</label>
+                    <label><input type="checkbox" name="key_aspects" value="communication"> Communication preferences & style</label>
+                    <label><input type="checkbox" name="key_aspects" value="personal"> Personal values & philosophy</label>
+                    <label><input type="checkbox" name="key_aspects" value="geographic"> Geographic context</label>
+                    <label><input type="checkbox" name="key_aspects" value="work_patterns"> Work patterns & productivity</label>
+                    <label><input type="checkbox" name="key_aspects" value="knowledge"> Knowledge domains & interests</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="privacy_level">4. Privacy vs. detail preference?</label>
+                <select name="privacy_level" id="privacy_level" required>
+                    <option value="">Select...</option>
+                    <option value="minimal">Privacy-focused (minimal personal information)</option>
+                    <option value="moderate">Balanced (relevant personal context)</option>
+                    <option value="comprehensive">Comprehensive (detailed personal profile)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="work_style">5. How would you describe your work style?</label>
+                <select name="work_style" id="work_style" required>
+                    <option value="">Select...</option>
+                    <option value="structured">Highly structured (detailed plans, schedules)</option>
+                    <option value="moderate">Moderately structured (some planning, some flexibility)</option>
+                    <option value="flexible">Flexible (adaptive, exploratory approach)</option>
+                    <option value="minimal">Minimal structure (spontaneous, flow-based)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="maintenance">6. How often will you update your AI-brain context?</label>
+                <select name="maintenance" id="maintenance" required>
+                    <option value="">Select...</option>
+                    <option value="daily">Daily (session logs after each work session)</option>
+                    <option value="weekly">Weekly (weekly reviews and updates)</option>
+                    <option value="bi-weekly">Bi-weekly (every 2 weeks)</option>
+                    <option value="monthly">Monthly (monthly check-ins)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="geographic">7. Is geographic context relevant to your goals?</label>
+                <select name="geographic" id="geographic" required>
+                    <option value="">Select...</option>
+                    <option value="true">Yes (location, relocation plans matter)</option>
+                    <option value="false">No (location-independent work/goals)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="technical_bg">8. Is professional/technical background important to track?</label>
+                <select name="technical_bg" id="technical_bg" required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes (specific skills, tools, methodologies)</option>
+                    <option value="somewhat">Somewhat (relevant but not primary focus)</option>
+                    <option value="no">No (not applicable to my use case)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="goals_tracking">9. Do you want to track specific goals and metrics?</label>
+                <select name="goals_tracking" id="goals_tracking" required>
+                    <option value="">Select...</option>
+                    <option value="true">Yes (explicit goals, timelines, success metrics)</option>
+                    <option value="false">No (exploratory, no specific targets)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="knowledge_domains">10. Do you have specific knowledge domains to track?</label>
+                <select name="knowledge_domains" id="knowledge_domains" required>
+                    <option value="">Select...</option>
+                    <option value="true">Yes (specific fields, interests, expertise areas)</option>
+                    <option value="false">No (general knowledge only)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary">Generate My Setup Package</button>
+        </form>
+
+        <footer>
+            <p>Privacy-first: No data is submitted or stored. Package is generated locally.</p>
+        </footer>
+    </div>
+</body>
+</html>
