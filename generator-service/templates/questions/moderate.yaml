@@ -1,0 +1,343 @@
+# Moderate Question Template
+# For users who want comprehensive but not exhaustive profiling
+
+metadata:
+  name: "Moderate Profile"
+  description: "Balanced questions for detailed AI context"
+  question_count: 45
+  estimated_time: "20-30 minutes"
+
+categories:
+  cognitive_profile:
+    priority: high
+    questions:
+      - id: "cog_01"
+        question: "How would you describe your thinking style?"
+        type: "multiple_choice"
+        options:
+          - "Highly analytical (break problems into components)"
+          - "Creative/intuitive (big-picture thinking)"
+          - "Systematic (step-by-step processes)"
+          - "Adaptive (context-dependent approach)"
+
+      - id: "cog_02"
+        question: "What's your preferred learning method?"
+        type: "multiple_choice"
+        options:
+          - "Hands-on practice"
+          - "Reading documentation"
+          - "Video tutorials"
+          - "Structured courses"
+
+      - id: "cog_03"
+        question: "How do you prefer to receive explanations?"
+        type: "multiple_choice"
+        options:
+          - "Direct and concise"
+          - "Detailed with examples"
+          - "Step-by-step instructions"
+          - "High-level overview first, then details"
+
+      - id: "cog_04"
+        question: "When learning something new, do you prefer:"
+        type: "multiple_choice"
+        options:
+          - "Theory first, then practice"
+          - "Practice first, learn theory as needed"
+          - "Mix of theory and practice simultaneously"
+          - "Immersive practice, minimal theory"
+
+  career_context:
+    priority: high
+    questions:
+      - id: "career_01"
+        question: "What's your current professional status?"
+        type: "short_text"
+        placeholder: "e.g., Software engineer, Student, Career transition, etc."
+
+      - id: "career_02"
+        question: "What are your primary goals for the next 6-12 months?"
+        type: "short_text"
+        placeholder: "e.g., Learn DevOps, Get promoted, Start a business, etc."
+
+      - id: "career_03"
+        question: "What's your biggest current challenge?"
+        type: "short_text"
+        placeholder: "e.g., Time management, Learning new skills, Job search, etc."
+
+      - id: "career_04"
+        question: "What skills are you currently developing?"
+        type: "short_text"
+        placeholder: "e.g., Kubernetes, Leadership, Public speaking, etc."
+
+      - id: "career_05"
+        question: "Where do you see yourself in 3-5 years?"
+        type: "short_text"
+        placeholder: "Your vision for future career development"
+
+  communication_preferences:
+    priority: high
+    questions:
+      - id: "comm_01"
+        question: "Preferred communication tone?"
+        type: "multiple_choice"
+        options:
+          - "Professional and formal"
+          - "Casual and friendly"
+          - "Direct and no-nonsense"
+          - "Supportive and encouraging"
+
+      - id: "comm_02"
+        question: "How should errors or mistakes be addressed?"
+        type: "multiple_choice"
+        options:
+          - "Direct correction without softening"
+          - "Gentle guidance with explanation"
+          - "Show me what's wrong and why"
+          - "Let me figure it out with hints"
+
+      - id: "comm_03"
+        question: "When asking for help, you prefer:"
+        type: "multiple_choice"
+        options:
+          - "Direct answers to specific questions"
+          - "Guidance to figure it out myself"
+          - "Detailed explanations of concepts"
+          - "Examples I can adapt"
+
+  work_patterns:
+    priority: medium
+    questions:
+      - id: "work_01"
+        question: "When are you most productive?"
+        type: "multiple_choice"
+        options:
+          - "Morning (6am-12pm)"
+          - "Afternoon (12pm-6pm)"
+          - "Evening (6pm-12am)"
+          - "Night (12am-6am)"
+
+      - id: "work_02"
+        question: "Preferred work style?"
+        type: "multiple_choice"
+        options:
+          - "Highly structured with schedules"
+          - "Moderately structured with flexibility"
+          - "Flexible and adaptive"
+          - "Spontaneous flow-based work"
+
+      - id: "work_03"
+        question: "How do you handle multiple tasks?"
+        type: "multiple_choice"
+        options:
+          - "Focus on one thing at a time"
+          - "Batch similar tasks together"
+          - "Switch between tasks frequently"
+          - "Parallel processing multiple tasks"
+
+      - id: "work_04"
+        question: "What's your ideal work environment?"
+        type: "multiple_choice"
+        options:
+          - "Quiet and distraction-free"
+          - "Moderate ambient noise"
+          - "Collaborative and social"
+          - "Varies by task type"
+
+  technical_background:
+    priority: medium
+    questions:
+      - id: "tech_01"
+        question: "Technical skill level?"
+        type: "multiple_choice"
+        options:
+          - "Beginner (learning fundamentals)"
+          - "Intermediate (working knowledge)"
+          - "Advanced (deep expertise)"
+          - "Expert (teaching/leading others)"
+
+      - id: "tech_02"
+        question: "Primary technical domains? (comma-separated)"
+        type: "short_text"
+        placeholder: "e.g., Python, DevOps, Web Development, Data Science, etc."
+
+      - id: "tech_03"
+        question: "Do you prefer depth or breadth in technical knowledge?"
+        type: "multiple_choice"
+        options:
+          - "Deep expertise in few areas"
+          - "Balanced depth and breadth"
+          - "Broad knowledge across many areas"
+          - "Depends on the context"
+
+      - id: "tech_04"
+        question: "How do you stay updated with technology?"
+        type: "multiple_choice"
+        options:
+          - "Regular reading (blogs, docs, papers)"
+          - "Hands-on experimentation"
+          - "Courses and structured learning"
+          - "Community and discussions"
+
+  goals_motivation:
+    priority: high
+    questions:
+      - id: "goals_01"
+        question: "What motivates you most?"
+        type: "multiple_choice"
+        options:
+          - "Solving challenging problems"
+          - "Creating impact and value"
+          - "Learning and growth"
+          - "Financial success"
+          - "Recognition and achievement"
+
+      - id: "goals_02"
+        question: "How do you track your progress?"
+        type: "multiple_choice"
+        options:
+          - "Detailed metrics and data"
+          - "Regular reflections and journaling"
+          - "Milestone completion"
+          - "Don't track formally"
+
+      - id: "goals_03"
+        question: "What's your approach to goal setting?"
+        type: "multiple_choice"
+        options:
+          - "Specific, measurable, time-bound goals"
+          - "General direction with flexibility"
+          - "Short-term goals only"
+          - "Long-term vision with adaptive steps"
+
+  decision_making:
+    priority: medium
+    questions:
+      - id: "decision_01"
+        question: "How do you make important decisions?"
+        type: "multiple_choice"
+        options:
+          - "Thorough research and analysis"
+          - "Trust intuition and gut feeling"
+          - "Seek advice from others"
+          - "Quick decisions, adjust as needed"
+
+      - id: "decision_02"
+        question: "When facing uncertainty, you tend to:"
+        type: "multiple_choice"
+        options:
+          - "Gather more information"
+          - "Move forward and learn by doing"
+          - "Wait and see how things develop"
+          - "Make the best guess and commit"
+
+      - id: "decision_03"
+        question: "How do you handle mistakes?"
+        type: "multiple_choice"
+        options:
+          - "Analyze to prevent recurrence"
+          - "Move on quickly without dwelling"
+          - "Use as learning opportunity"
+          - "Seek feedback and adjust"
+
+  time_management:
+    priority: medium
+    questions:
+      - id: "time_01"
+        question: "How do you prioritize tasks?"
+        type: "multiple_choice"
+        options:
+          - "Urgent and important matrix"
+          - "Based on deadlines"
+          - "Impact and value"
+          - "What feels right at the moment"
+
+      - id: "time_02"
+        question: "Do you use any productivity systems?"
+        type: "short_text"
+        placeholder: "e.g., GTD, Pomodoro, Time blocking, None, etc."
+
+      - id: "time_03"
+        question: "How do you handle distractions?"
+        type: "multiple_choice"
+        options:
+          - "Strict boundaries and focus time"
+          - "Manage but allow some flexibility"
+          - "Embrace as part of workflow"
+          - "Struggle with distractions"
+
+  geographic_context:
+    priority: medium
+    questions:
+      - id: "geo_01"
+        question: "Current location (city, country)?"
+        type: "short_text"
+        placeholder: "e.g., Belgrade, Serbia"
+
+      - id: "geo_02"
+        question: "Are you planning to relocate?"
+        type: "multiple_choice"
+        options:
+          - "No, staying in current location"
+          - "Yes, specific location in mind"
+          - "Yes, flexible about location"
+          - "Maybe, exploring options"
+
+      - id: "geo_03"
+        question: "If relocating, where? (optional)"
+        type: "short_text"
+        placeholder: "e.g., Vienna, Remote EU, etc."
+
+  values_philosophy:
+    priority: low
+    questions:
+      - id: "values_01"
+        question: "What matters most in your work?"
+        type: "ranking"
+        options:
+          - "Impact and meaningful results"
+          - "Financial growth"
+          - "Learning and skill development"
+          - "Work-life balance"
+          - "Recognition and status"
+
+      - id: "values_02"
+        question: "Decision-making approach?"
+        type: "multiple_choice"
+        options:
+          - "Data-driven and analytical"
+          - "Intuition and gut feeling"
+          - "Consensus and collaboration"
+          - "Experience-based"
+
+      - id: "values_03"
+        question: "How important is work-life balance?"
+        type: "multiple_choice"
+        options:
+          - "Critical - strict boundaries"
+          - "Important - generally maintain"
+          - "Flexible - depends on phase"
+          - "Work-focused - balance later"
+
+  knowledge_domains:
+    priority: low
+    questions:
+      - id: "knowledge_01"
+        question: "Areas of strong interest? (comma-separated)"
+        type: "short_text"
+        placeholder: "e.g., Philosophy, Economics, Gaming, Health, etc."
+
+      - id: "knowledge_02"
+        question: "Current learning goals?"
+        type: "short_text"
+        placeholder: "What are you trying to learn right now?"
+
+      - id: "knowledge_03"
+        question: "How do you prefer to consume information?"
+        type: "multiple_choice"
+        options:
+          - "Long-form written content"
+          - "Short-form summaries"
+          - "Visual (videos, diagrams)"
+          - "Audio (podcasts, audiobooks)"
+          - "Interactive (courses, workshops)"
